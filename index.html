@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de ISEKITOLO Christopher">
+    <meta name="keywords" content="portfolio, ISEKITOLO,christohe-isekitolo-a86a42269,christoher,cris,ark,ark810454,lokole,chris,christophe">
+    <meta name="author" content="ISEKITOLO LOKOLE Christophe">
+    <link rel="stylesheet" href="style.css">
+    <link href="fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="_bg.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/ab39eccf90.js" crossorigin="anonymous"></script>
+    <title>Mon portfolio</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav>
+            <div class="themes">
+                <span class="th n1" id="fisttheme" onclick="firsttheme();"><i class="fa fa-sun"></i></span>
+                <span class="th n2" id="secondtheme" onclick="secondtheme();"><i class="fa fa-moon"></i></span>
+                <span class="th n2" id="thirdtheme" onclick="thirdtheme();"><i class="fa fa-star"></i></span>
+                <span class="tth" id="tth">thèmes</span>
+            </div>
+            <div class="logo"> Mypf <b>.</b> </div>
+            <input type="checkbox" id="check">
+
+            <ul class="navItems">
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="links">
+                <a href="https://www.linkedin.com/mwlite/in/christohe-isekitolo-a86a42269" target="_blank"><i
+                        class="fab fa-linkedin"><span>linkedin</span></i></a>
+                <a href="https://www.instagram.com/anrrsks/" target="_blank"><i
+                        class="fab fa-instagram"><span>instagram</span></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i
+                        class="fab fa-twitter"><span>twitter</span></i></a>
+                <a href="https://www.facebook.com/christopher.cris.5855" target="_blank"><i
+                        class="fab fa-facebook"><span>facebook</span></i></a>
+                <a href="https://www.youtube.com/@ark6992" target="_blank"><i
+                        class="fab fa-youtube"><span>youtube</span></i></a>
+            </div>
+            <div class="label">
+                <label for="check" class="fa fa-bars"></label>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello!</span>
+                <h1>I'm <span id="multiText" class="multiText"></span></h1>
+                <p class="text"><span>Cliquez <a href="#" onclick="videoPres();"> ici</a> pour Visualiser ma vidéo de
+                        présentation</span><br>
+                    <br> <span class="texte"> </span>
+                </p>
+                <div class="btn">
+                    <button>Download CV</button>
+                    <button>Hire Me</button>
+
+                </div>
+                
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="bgcri.png" id="img1" alt="christoher cris">
+                    <img src="traite.png" id="drf" width="400" height="400" alt="christoher cris">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="toggle" id="toggle" onclick="close(event);">
+        <span class="line s1"></span>
+        <span class="line s2"></span>
+    </button>
+    <div id="vid">
+        <div class="bg"></div>
+
+        <video src="video.mp4" controls loop></video>
+    </div>
+    <script src="js.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings: ["coder", "designer", "blogger"],
+            loop: true,
+            typeSpeed: 100,
+            backSpedd: 80,
+            backDelay: 1500
+        })
+
+        var PresentText = new Typed(".texte", {
+            strings: ["Ir Christopher ISEKITOLO",
+                "En tant que programmeur informatique, je suis constamment émerveillé par la puissance de la technologie et sa capacité à transformer le monde qui nous entoure.",
+                " Pour moi, la programmation n'est pas seulement une profession, c'est une passion qui me permet de créer des solutions  innovantes et de donner vie à des idées.",
+                " Grâce à mon expertise dans différents langages de programmation, je suis capable de développer des logiciels, des sites web et des applications mobiles qui sont non seulement fonctionnels mais aussi conviviaux.",
+                " Je crois que la programmation est à la fois un art et une science, et je m'efforce d'équilibrer la créativité et la technicité dans tous mes projets. ",
+                " Qu'il s'agisse de déboguer du code ou de concevoir une interface utilisateur intuitive, j'aborde chaque tâche avec une attention méticuleuse aux détails et un engagement à l'excellence.",
+                " En tant que programmeur informatique, je suis enthousiasmé par les possibilités infinies du monde numérique et déterminé à avoir un impact positif grâce à mon travail."],
+            loop: true,
+            typeSpeed: 40,
+            backSpedd: 10,
+            backDelay: 1500
+        })
+    </script>
+    <img src="_bg.png" id="bg">
+</body>
+
+</html>
