@@ -20,15 +20,15 @@
     <div class="container">
 
         <nav>
-            <div class="themes">
-                <span class="th n1" id="fisttheme" onclick="firsttheme();"><i class="fa fa-sun"></i></span>
-                <span class="th n2" id="secondtheme" onclick="secondtheme();"><i class="fa fa-moon"></i></span>
-                <span class="th n2" id="thirdtheme" onclick="thirdtheme();"><i class="fa fa-star"></i></span>
+            <div class="themes" id="myframe">
+                <button class="th n1" id="theme1"  onclick="firsttheme(event);"><i class="fa fa-sun"></i></button>
+                <button class="th n3" id="theme3" onclick="thirdtheme(event);"><i class="fa fa-moon"></i></button>
+                <button class="th n2" id="theme3" onclick="secondtheme(event);"><i class="fa fa-star"></i></button>
                 <span class="tth" id="tth">thèmes</span>
             </div>
             <div class="logo"> Mypf <b>.</b> </div>
             <input type="checkbox" id="check">
-
+                       
             <ul class="navItems">
                 <li><a href="Portfolio.html">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -61,15 +61,23 @@
                     <br> <span class="texte"> </span>
                 </p>
                 <div class="btn">
-                    <button>Download CV</button>
-                    <button>Hire Me</button>
+                    <button onclick="window.open('cv cris.pdf', '_blank')" type="button"><span>Download CV</span></button>
+                    <button type="button" onclick="window.location.href='www.linkedin.com/mwlite/in/christohe-isekitolo-a86a42269', '_blank'"><span>Hire Me</span></button>
 
                 </div>
                 
             </div>
             <div class="cols cols1">
                 <div class="imgbox">
-                    <img src="bgcri.png" id="img1" alt="christoher cris">
+                    <span id="img1">
+                        <div class="face front">ISEKITOLO</div>
+                        <div class="face back">Back</div>
+                        <div class="face top">Top</div>
+                        <div class="face bottom">LOKOLE</div>
+                        <div class="face left">Christopher</div>
+                        <div class="face right">Ingenieur</div>
+
+                    </span>
                     <img src="traite.png" id="drf" width="400" height="400" alt="christoher cris">
                 </div>
             </div>
@@ -77,11 +85,12 @@
 
     </div>
 
-    <button class="toggle" id="toggle" onclick="close(event);">
-        <span class="line s1"></span>
-        <span class="line s2"></span>
-    </button>
+    
     <div id="vid">
+        <button class="toggle" id="toggle" onclick="window.parent.close();">
+            <span class="line s1"></span>
+            <span class="line s2"></span>
+        </button>
         <div class="bg"></div>
 
         <video src="video.mp4" controls loop></video>

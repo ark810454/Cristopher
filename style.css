@@ -127,13 +127,13 @@ b{
     align-items: center;
 
 }
-.wrapper button{
+.btn button{
     background-color: #3d535f;
     color: #f3f5f8;
-    border: none;
+    border: 2px solid #3d535f;
     padding: 5px 10px;
     margin: 40px 5px;
-   
+   position: relative;
     cursor: pointer;
     font-size: 1.8vw;
     font-weight: 400;
@@ -141,9 +141,53 @@ b{
     text-transform: capitalize;
     box-shadow: 0 15px 10px rgba(0, 0, 0, 4);
 }
-button:hover{
+
+.btn button:last-child{
+    position: relative;
     background-color: #7f00ff;
+    border: #7f00ff 2px solid;
 }
+.btn button span{
+    color: #fff;
+    position: relative;
+    z-index: 2200;
+}
+.btn button:last-child::before{
+    background-color: #3d535f;
+    border: 2px solid #7f00ff;
+    color: #fff;
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: 0;
+    bottom: 0;
+    width: -0%;
+    height: 100%;
+    transition: 0.5s;
+}
+.btn button:last-child:hover::before{
+    width: 100%;
+}
+.btn button::before{
+    background-color: #7f00ff;
+    border: 2px solid #3d535f;
+    color: #fff;
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: 0;
+    bottom: 0;
+    width: -0%;
+    height: 100%;
+    transition: 0.5s;
+}
+.btn button:hover::before{
+    width: 100%;
+}
+
+
 .cols .imgbox{
     position: relative;
     right: -2vw;
@@ -181,24 +225,58 @@ button:hover{
     }
     
 }
-.cols .imgbox #img1{
+.cols .imgbox #img1 {
     position: absolute;
     top: 90px;
-    background: linear-gradient(#7f00ff, pink);
-    border-radius: 50%;
     right: 0px;
-    width: 100%;
-    height: 60%;
-    transform: rotate(180deg);
-    animation: animatebg 7s linear infinite;
-
-}
-@keyframes animatebg{
-    50%{
-        right: 50px;
-    }
-   
-}
+    width: 300px;
+    height: 300px;
+    animation: animatebg 5s linear infinite;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg) rotateY(45deg);
+  }
+  
+  .face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#7f00ff, pink);
+    text-align: center;
+    /*outline: 35px solid #3d535f;*/
+    line-height: 250px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .front {
+    transform: translateZ(125px);
+  }
+  
+  .back {
+    transform: translateZ(-125px) ;
+  }
+  
+  .top {
+    transform: rotateX(-90deg) translateZ(125px) ;
+  }
+  
+  .bottom {
+    transform: rotateX(90deg) translateZ(125px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(125px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(125px) ;
+  }
+  
+  @keyframes animatebg {
+    0% { transform: rotateY(0deg) rotateX(360deg); }
+    100% { transform: rotateY(360deg); }
+  }
 
 .topline{
     display: block;
@@ -562,8 +640,8 @@ p span{
 .th{
     color: #3d535f;
     font-size: 22px;
-    position: absolute;
-    
+    border: none;
+    margin-top: 10px;
     border-radius: 10px;
 }
 .th:hover{
@@ -573,16 +651,23 @@ p span{
 }
 .n1{
     display: none;
+    color: #fff;
+    background-color: #030a0e;
 }
 .n2{
-    display: block;
+    
 }
 .n3{
     display: none;
+    color: #030a0e;
+    background-color: #3d535f;
+}
+.n3:hover{
+    color: #030a0e;
 }
 #tth{
     position: relative;
-    bottom: -20px;
+    
 }
 
 
